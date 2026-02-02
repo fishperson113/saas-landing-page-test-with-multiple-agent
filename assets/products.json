@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Advanced Multi-Vitamin",
+            "price": 24.99,
+            "category": "Wellness",
+            "description": "Daily essential vitamins for immune support and energy.",
+            "image": "https://placehold.co/300x300/e6f7ff/007bff?text=Vitamins"
+        },
+        {
+            "id": 2,
+            "name": "Pain Relief Extra Strength",
+            "price": 12.50,
+            "category": "Prescription",
+            "description": "Fast-acting relief for headaches and muscle pain.",
+            "image": "https://placehold.co/300x300/ffeeef/dc3545?text=Pain+Relief"
+        },
+        {
+            "id": 3,
+            "name": "Allergy Defense",
+            "price": 18.99,
+            "category": "Prescription",
+            "description": "24-hour non-drowsy allergy relief tablets.",
+            "image": "https://placehold.co/300x300/e8f5e9/198754?text=Allergy"
+        },
+        {
+            "id": 4,
+            "name": "Omega-3 Fish Oil",
+            "price": 29.99,
+            "category": "Supplements",
+            "description": "High potency Omega-3 for heart and brain health.",
+            "image": "https://placehold.co/300x300/fff3cd/ffc107?text=Omega-3"
+        },
+        {
+            "id": 5,
+            "name": "First Aid Kit Pro",
+            "price": 45.00,
+            "category": "Wellness",
+            "description": "Complete medical kit for home and travel emergencies.",
+            "image": "https://placehold.co/300x300/f8f9fa/343a40?text=First+Aid"
+        },
+        {
+            "id": 6,
+            "name": "Sleep Aid Night",
+            "price": 15.75,
+            "category": "Supplements",
+            "description": "Natural melatonin blend for restful sleep.",
+            "image": "https://placehold.co/300x300/e2e3e5/6c757d?text=Sleep+Aid"
+        }
+    ]
+}

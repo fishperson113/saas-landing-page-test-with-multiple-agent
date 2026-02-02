@@ -1,0 +1,51 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* Hero Section with Medical Blue Gradient */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    min-height: 60vh;
+}
+
+.hero-section img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Card Hover Effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Product Image styling in grid */
+.product-img-container {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.product-img-container img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Cart Item Styling */
+.cart-item {
+    transition: background-color 0.2s;
+}
+
+.cart-item:hover {
+    background-color: #f8f9fa;
+}

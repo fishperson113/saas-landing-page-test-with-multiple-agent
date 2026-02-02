@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trusted online pharmacy for all your medical needs. Fast shipping and secure checkout.">
+    <title>MediCare Plus - Trusted Online Pharmacy</title>
+    
+    <!-- Google Fonts: Inter for professional medical look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="#">
+                <i class="fa-solid fa-prescription-bottle-medical me-2 fs-4"></i>
+                MediCare+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop Medicines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- Cart Button -->
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                                0
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Healthcare Simplified.</h1>
+                    <p class="lead mb-4">Your trusted partner for prescription refills, over-the-counter medicines, and automated health tracking.</p>
+                    <a href="#shop" class="btn btn-light text-primary fw-bold px-4 py-3 rounded-pill shadow-sm">
+                        Start Shopping <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block text-center">
+                    <!-- Placeholder for Hero Image (Using FontAwesome or custom asset) -->
+                    <img src="https://placehold.co/600x400/0d6efd/ffffff?text=Reliable+Healthcare" alt="Healthcare Illustration" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-primary fs-1 mb-3"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h3 class="h5 fw-bold">Fast Delivery</h3>
+                        <p class="text-muted">Same-day shipping for all orders placed before 2 PM.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-primary fs-1 mb-3"><i class="fa-solid fa-user-doctor"></i></div>
+                        <h3 class="h5 fw-bold">Expert Advice</h3>
+                        <p class="text-muted">Chat with licensed pharmacists 24/7 for any queries.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-primary fs-1 mb-3"><i class="fa-solid fa-shield-heart"></i></div>
+                        <h3 class="h5 fw-bold">Secure Data</h3>
+                        <p class="text-muted">Your health data is encrypted and HIPAA compliant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop/Product Grid -->
+    <section id="shop" class="py-5">
+        <div class="container">
+            <div class="row mb-4 align-items-end">
+                <div class="col-md-8">
+                    <h2 class="fw-bold">Featured Products</h2>
+                    <p class="text-muted mb-0">Browse our top-rated medical essentials.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <select class="form-select w-auto d-inline-block" id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="prescription">Prescription</option>
+                        <option value="wellness">Wellness</option>
+                        <option value="supplements">Supplements</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Products Container -->
+            <div id="product-list" class="row g-4">
+                <!-- Products will be injected here via JS -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">MediCare+</h5>
+                    <p class="text-secondary">Providing quality healthcare products and services to our community since 2010.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Shop</h6>
+                    <ul class="list-unstyled text-secondary">
+                        <li><a href="#" class="text-decoration-none text-reset">Prescriptions</a></li>
+                        <li><a href="#" class="text-decoration-none text-reset">Vitamins</a></li>
+                        <li><a href="#" class="text-decoration-none text-reset">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled text-secondary">
+                        <li><a href="#" class="text-decoration-none text-reset">Contact Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-reset">FAQs</a></li>
+                        <li><a href="#" class="text-decoration-none text-reset">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Enter email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-secondary small">
+                &copy; 2026 MediCare Plus. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar" aria-labelledby="cartLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold" id="cartLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Cart Items -->
+            <div id="cart-items" class="flex-grow-1 overflow-auto">
+                <div class="text-center text-muted py-5">Your cart is empty.</div>
+            </div>
+            
+            <!-- Cart Footer -->
+            <div class="border-top pt-3 mt-3">
+                <div class="d-flex justify-content-between fw-bold mb-3">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn btn-primary w-100 py-2">Checkout Securely</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Application Scripts -->
+    <!-- Note: type="module" allows us to use import/export -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
