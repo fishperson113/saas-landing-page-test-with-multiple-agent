@@ -69,6 +69,7 @@ If the user requested to "push to github" or "complete the task":
 1.  **Activate**: `/[github]` workflow.
 2.  **Push**: Commit and push changes to a feature branch.
 3.  **PR**: Open a Pull Request if applicable.
+4.  **Notify**: Activate `@[.agent/workflows/slack.md]` to alert the team (e.g. "New PR created: [link]").
 
 ---
 

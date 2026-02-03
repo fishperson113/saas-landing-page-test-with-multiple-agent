@@ -63,10 +63,8 @@
 
                 if (result.success) {
                     // Success!
-                    alert('Login Successful! Token: ' + result.token);
-                    // Redirect or save token
                     localStorage.setItem('authToken', result.token);
-                    // window.location.href = '/dashboard.html'; // Future step
+                    window.location.href = 'index.html';
                 } else {
                     // Fail
                     throw new Error(result.message || 'Login failed');
