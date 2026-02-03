@@ -34,6 +34,7 @@ Read the user's request and categorize it into one of these paths:
 | **Brainstorming** | `@[.agent/workflows/brainstorm.md]` | Ideation, exploring options, trade-offs. |
 | **Server/Preview** | `@[.agent/workflows/preview.md]` | Managing local dev servers. |
 | **Status Check** | `@[.agent/workflows/status.md]` | Checking project health/progress. |
+| **GitHub Ops** | `@[.agent/workflows/github.md]` | Searching, PRs, Issues, and GitOps. |
 
 ### Step 2: Select Your Squad (Agent Assignment)
 
@@ -61,6 +62,13 @@ Before executing the workflow, **identify which specialists you need**. Do not t
 1.  **Announce**: "Routing to `/[workflow]` with squad: `@[agent-1]`, `@[agent-2]`..."
 2.  **Read**: Use `view_file` to read the **Target Workflow** AND the **Selected Agent Profiles**.
 3.  **Execute**: Follow the steps in the *Target Workflow*, applying the wisdom/constraints from the *Agent Profiles*.
+
+### Step 4: Finalize & GitOps (Optional)
+
+If the user requested to "push to github" or "complete the task":
+1.  **Activate**: `/[github]` workflow.
+2.  **Push**: Commit and push changes to a feature branch.
+3.  **PR**: Open a Pull Request if applicable.
 
 ---
 
