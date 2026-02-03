@@ -1,0 +1,40 @@
+/* Custom styles supplementing Tailwind */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sharp, brutalist selection style */
+::selection {
+    background-color: #FF5722;
+    color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0068FF;
+}
+
+/* Animation utilities */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(2deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(2deg); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}

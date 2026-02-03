@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Zalo OA | Enterprise Solution</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zalo: '#0068FF',
+                        'zalo-dark': '#0054CC',
+                        'accent': '#FF5722', // Deep Orange for sharp contrast
+                        'surface': '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b-2 border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-display font-bold text-3xl tracking-tighter text-zalo">ZALO<span class="text-slate-900">CONNECT</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="font-medium text-slate-600 hover:text-zalo transition-colors">Features</a>
+                    <a href="#integration" class="font-medium text-slate-600 hover:text-zalo transition-colors">Integration</a>
+                    <a href="#" class="bg-slate-900 text-white px-6 py-2.5 font-bold hover:bg-accent transition-colors duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none border-2 border-slate-900">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7">
+                    <div class="inline-block bg-accent/10 text-accent font-bold px-4 py-1.5 mb-6 border-l-4 border-accent">
+                        OFFICIAL PARTNER
+                    </div>
+                    <h1 class="font-display text-5xl lg:text-7xl font-bold leading-tight mb-8">
+                        Connect with Customers on <span class="text-zalo underline decoration-4 decoration-accent underline-offset-4">Zalo</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+                        Seamlessly integrate Zalo Official Account into your workflow. Automate messages, support customers, and grow your business with the #1 messaging app in Vietnam.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-zalo text-white px-8 py-4 text-lg font-bold hover:bg-zalo-dark transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none border-2 border-slate-900 flex items-center justify-center gap-2 group">
+                            Connect Zalo OA
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                        <button class="bg-white text-slate-900 px-8 py-4 text-lg font-bold hover:bg-slate-50 transition-all shadow-[6px_6px_0px_0px_rgba(203,213,225,1)] hover:translate-y-1 hover:shadow-none border-2 border-slate-200">
+                            View Documentation
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Visual / Decor -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-slate-900 p-2 shadow-[12px_12px_0px_0px_rgba(0,104,255,0.2)] border-2 border-slate-900 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <!-- Placeholder for Zalo UI Mockup -->
+                        <div class="bg-white aspect-[4/5] relative overflow-hidden flex flex-col">
+                            <!-- Mock Header -->
+                            <div class="bg-zalo p-4 flex items-center gap-3 text-white">
+                                <div class="w-8 h-8 rounded-full bg-white/20"></div>
+                                <div class="font-bold">Zalo Official Account</div>
+                            </div>
+                            <!-- Mock Chat -->
+                            <div class="flex-1 p-4 space-y-4 bg-slate-50">
+                                <div class="flex gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-slate-300 flex-shrink-0"></div>
+                                    <div class="bg-white p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl shadow-sm border border-slate-100 text-sm max-w-[80%]">
+                                        Welcome to ZaloConnect! How can we help you today?
+                                    </div>
+                                </div>
+                                <div class="flex gap-2 justify-end">
+                                    <div class="bg-zalo text-white p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl shadow-sm text-sm max-w-[80%]">
+                                        I'd like to integrate the Chat Widget.
+                                    </div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-slate-300 flex-shrink-0"></div>
+                                    <div class="bg-white p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl shadow-sm border border-slate-100 text-sm max-w-[80%]">
+                                        Great choice! It's easy. Just add the SDK code.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mock Input -->
+                            <div class="p-3 border-t bg-white">
+                                <div class="h-10 bg-slate-100 rounded flex items-center px-3 text-slate-400 text-sm">
+                                    Type a message...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-surface border-t-2 border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold mb-4">Why Integrate?</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 border-2 border-slate-100 hover:border-zalo transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-zalo/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
+                    <div class="w-14 h-14 bg-zalo text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
+                        1
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Direct Engagement</h3>
+                    <p class="text-slate-600">Reach 70M+ users directly on their favorite messaging app. No barriers.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 border-2 border-slate-100 hover:border-zalo transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-zalo/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
+                    <div class="w-14 h-14 bg-accent text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
+                        2
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Automated Support</h3>
+                    <p class="text-slate-600">Deploy chatbots and auto-replies to handle customer queries 24/7.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 border-2 border-slate-100 hover:border-zalo transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-zalo/5 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150"></div>
+                    <div class="w-14 h-14 bg-slate-900 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
+                        3
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3">Easy Integration</h3>
+                    <p class="text-slate-600">Simple SDK and Widget support. Get up and running in minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zalo Widget Container (Placeholder) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- The Zalo SDK will inject the widget here or use a custom button -->
+        <div id="zalo-chat-widget" class="relative group cursor-pointer">
+            <div class="absolute inset-0 bg-zalo rounded-full animate-ping opacity-20"></div>
+            <div class="relative bg-zalo hover:bg-zalo-dark text-white p-4 rounded-full shadow-lg border-2 border-white transition-transform hover:scale-110 flex items-center justify-center w-16 h-16">
+                <!-- Zalo Icon SVG -->
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+                    <path d="M44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24Z" fill="white"/>
+                    <path d="M26 31H34V29H26V31ZM14 17H34V19H14V17ZM14 23H34V25H14V23Z" fill="#0068FF"/> 
+                    <!-- Rough Zalo-ish icon -->
+                </svg>
+            </div>
+            <!-- Tooltip -->
+            <div class="absolute bottom-full right-0 mb-3 w-48 bg-slate-900 text-white text-xs p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity text-center pointer-events-none">
+                Chat with us on Zalo!
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Scripts -->
+    <script src="scripts/zalo.js"></script>
+</body>
+</html>
