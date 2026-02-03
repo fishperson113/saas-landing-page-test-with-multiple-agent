@@ -28,9 +28,10 @@ Use the `github-mcp-server` tools via the `github-integration` skill to interact
 3. **Analyze Intent**:
     - "find/search" -> Use `search_code` or `search_issues`
     - "pr/pull request" -> Use `list_pull_requests` or `create_pull_request`
-    - "push/commit" -> Follow GitOps flow (Branch -> Push -> PR)
+    - "push/commit" -> Follow GitOps flow (Branch -> Push -> **MANUAL PR LINK**)
     - "diff/review" -> Use `pull_request_read` or `pull_request_review_write`
 4. **Execute**: Perform the requested operation using the MCP tools.
+    - **CRITICAL**: For "push/commit" tasks, DO NOT use `create_pull_request`. Instead, push the branch and return the https URL for the user to create the PR manually (e.g. `https://github.com/owner/repo/pull/new/branch`).
 
 ---
 
@@ -39,7 +40,7 @@ Use the `github-mcp-server` tools via the `github-integration` skill to interact
 ```
 /github search auth middleware in fishperson113/repo
 /github list prs
-/github create pr "feat: add login" from feature-branch
+/github push "feat: add login" (returns PR link)
 /github review pr #123
 /github check status of #45
 ```

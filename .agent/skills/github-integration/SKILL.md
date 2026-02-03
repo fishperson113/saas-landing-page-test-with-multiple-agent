@@ -9,29 +9,57 @@ This skill provides a complete guide for using the `github-mcp-server` tools to 
 
 ## 🌟 Core Capabilities
 
-### 1. Code Exploration & Search
-- **Search Code**: `mcp_github-mcp-server_search_code` (Use for precise symbol/pattern finding)
-- **Get File Content**: `mcp_github-mcp-server_get_file_contents` (Read specific files)
-- **Search Repos**: `mcp_github-mcp-server_search_repositories` (Find projects)
-- **List Commits**: `mcp_github-mcp-server_list_commits` (History persistence)
+### 1. Code & Repository Exploration
+- **Search Code**: `mcp_github-mcp-server_search_code` - Search code
+- **Search Repos**: `mcp_github-mcp-server_search_repositories` - Search repositories
+- **Get File Content**: `mcp_github-mcp-server_get_file_contents` - Get file or directory contents
+- **List Commits**: `mcp_github-mcp-server_list_commits` - List commits
+- **Get Commit**: `mcp_github-mcp-server_get_commit` - Get commit details
+- **List Branches**: `mcp_github-mcp-server_list_branches` - List branches
+- **List Tags**: `mcp_github-mcp-server_list_tags` - List tags
+- **Get Tag**: `mcp_github-mcp-server_get_tag` - Get tag details
+- **List Releases**: `mcp_github-mcp-server_list_releases` - List releases
+- **Get Latest Release**: `mcp_github-mcp-server_get_latest_release` - Get latest release
+- **Get Release by Tag**: `mcp_github-mcp-server_get_release_by_tag` - Get a release by tag name
+- **Get Label**: `mcp_github-mcp-server_get_label` - Get a specific label from a repository.
 
 ### 2. Pull Request Management
-- **List PRs**: `mcp_github-mcp-server_list_pull_requests`
-- **Create PR**: `mcp_github-mcp-server_create_pull_request`
-- **Update PR**: `mcp_github-mcp-server_update_pull_request`
-- **Review PR**: `mcp_github-mcp-server_pull_request_review_write`
-- **Get Diff**: `mcp_github-mcp-server_pull_request_read` (method="get_diff")
+- **List PRs**: `mcp_github-mcp-server_list_pull_requests` - List pull requests
+- **Search PRs**: `mcp_github-mcp-server_search_pull_requests` - Search pull requests
+- **Get PR Details**: `mcp_github-mcp-server_pull_request_read` - Get details for a single pull request
+- **Create PR**: `mcp_github-mcp-server_create_pull_request` - Open new pull request
+- **Update PR**: `mcp_github-mcp-server_update_pull_request` - Edit pull request
+- **Update PR Branch**: `mcp_github-mcp-server_update_pull_request_branch` - Update pull request branch
+- **Merge PR**: `mcp_github-mcp-server_merge_pull_request` - Merge pull request
+- **Review PR**: `mcp_github-mcp-server_pull_request_review_write` - Write operations on PR reviews
+- **Add Review Comment**: `mcp_github-mcp-server_add_comment_to_pending_review` - Add review comment to pending review
+- **Request Copilot Review**: `mcp_github-mcp-server_request_copilot_review` - Request Copilot review
 
-### 3. Issue Tracking
-- **Search Issues**: `mcp_github-mcp-server_search_issues`
-- **Read Issue**: `mcp_github-mcp-server_issue_read`
-- **Create/Update**: `mcp_github-mcp-server_issue_write`
-- **Comments**: `mcp_github-mcp-server_add_issue_comment`
+### 3. Issue Tracking & Management
+- **List Issues**: `mcp_github-mcp-server_list_issues` - List issues
+- **Search Issues**: `mcp_github-mcp-server_search_issues` - Search issues
+- **Read Issue**: `mcp_github-mcp-server_issue_read` - Get issue details
+- **Write Issue**: `mcp_github-mcp-server_issue_write` - Create or update issue
+- **Issue Types**: `mcp_github-mcp-server_list_issue_types` - List available issue types
+- **Sub-Issue Write**: `mcp_github-mcp-server_sub_issue_write` - Change sub-issue
+- **Add Comment**: `mcp_github-mcp-server_add_issue_comment` - Add comment to issue
+- **Assign Copilot**: `mcp_github-mcp-server_assign_copilot_to_issue` - Assign Copilot to issue
 
-### 4. File Operations
-- **Push Files**: `mcp_github-mcp-server_push_files` (Preferred for multi-file commits)
-- **Create/Update Single**: `mcp_github-mcp-server_create_or_update_file`
-- **Create Branch**: `mcp_github-mcp-server_create_branch`
+### 4. File & Branch Operations
+- **Push Files**: `mcp_github-mcp-server_push_files` - Push files to repository
+- **Create/Update File**: `mcp_github-mcp-server_create_or_update_file` - Create or update file
+- **Delete File**: `mcp_github-mcp-server_delete_file` - Delete file
+- **Create Branch**: `mcp_github-mcp-server_create_branch` - Create branch
+
+### 5. Repository Administration
+- **Create Repository**: `mcp_github-mcp-server_create_repository` - Create repository
+- **Fork Repository**: `mcp_github-mcp-server_fork_repository` - Fork repository
+
+### 6. Users & Teams
+- **Get Me**: `mcp_github-mcp-server_get_me` - Get my user profile
+- **Search Users**: `mcp_github-mcp-server_search_users` - Search users
+- **Get Teams**: `mcp_github-mcp-server_get_teams` - Get teams
+- **Get Team Members**: `mcp_github-mcp-server_get_team_members` - Get team members
 
 ---
 
