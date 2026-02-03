@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Connect Zalo OA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 flex items-center justify-center h-screen font-sans">
+
+    <div class="bg-white p-8 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] max-w-md w-full">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
+            <p class="text-gray-600">Enter your credentials to access the dashboard</p>
+        </div>
+
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-bold mb-2 uppercase tracking-wide">Username</label>
+                <input type="text" id="username" name="username" class="w-full border-2 border-black p-3 focus:outline-none focus:ring-2 focus:ring-[#0068FF] transition-all" placeholder="Enter username" required>
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-bold mb-2 uppercase tracking-wide">Password</label>
+                <input type="password" id="password" name="password" class="w-full border-2 border-black p-3 focus:outline-none focus:ring-2 focus:ring-[#0068FF] transition-all" placeholder="Enter password" required>
+            </div>
+
+            <div id="errorMessage" class="hidden text-red-500 text-sm font-bold text-center bg-red-50 p-2 border-l-4 border-red-500"></div>
+
+            <button type="submit" class="w-full bg-[#0068FF] text-white font-bold py-4 border-2 border-black hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-0 active:shadow-none transition-all">
+                LOGIN NOW
+            </button>
+        </form>
+
+        <div class="mt-6 text-center">
+            <a href="index.html" class="text-gray-500 hover:text-black hover:underline text-sm font-medium">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorMessage.classList.add('hidden');
+            errorMessage.textContent = '';
+
+            const formData = new FormData(loginForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Success!
+                    alert('Login Successful! Token: ' + result.token);
+                    // Redirect or save token
+                    localStorage.setItem('authToken', result.token);
+                    // window.location.href = '/dashboard.html'; // Future step
+                } else {
+                    // Fail
+                    throw new Error(result.message || 'Login failed');
+                }
+            } catch (error) {
+                errorMessage.textContent = error.message;
+                errorMessage.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
